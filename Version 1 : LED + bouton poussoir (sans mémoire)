@@ -1,0 +1,15 @@
+Version 1 : LED + bouton poussoir (sans mémoire)
+int bouton = 2;
+int led = 13;
+void setup() {
+  pinMode(bouton, INPUT);
+  pinMode(led, OUTPUT);
+}
+void loop() {
+  int etat = digitalRead(bouton);
+  if (etat == HIGH) {
+    digitalWrite(led, HIGH);
+  } else {
+    digitalWrite(led, LOW);
+  }
+}
